@@ -3,7 +3,7 @@
 ## create-history-table.pl
 This script helps you to create MySQL triggers, which store changed records from one DB table into another \*\_history table. Inserted, changed and deleted records are archived.
 
-I have used this script to create archive for my DNS records. [PowerDNS]() use MySQL as storage backend for DNS records. Basic schema is [here](https://github.com/PowerDNS/pdns/blob/master/modules/gmysqlbackend/schema.mysql.sql).
+I have used this script to create archive for my DNS records. [PowerDNS](https://www.powerdns.com/) use MySQL as storage backend for DNS records. Basic schema is [here](https://github.com/PowerDNS/pdns/blob/master/modules/gmysqlbackend/schema.mysql.sql).
 
 Example:
 ```bash
