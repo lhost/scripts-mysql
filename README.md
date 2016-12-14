@@ -17,7 +17,7 @@ create-history-table.pl --database pdns --table cryptokeys | mysql pdns
 create-history-table.pl --database pdns --table tsigkeys | mysql pdns
 
 
-# for poweradmin
+# for poweradmin - http://www.poweradmin.org/
 create-history-table.pl --database pdns --table migrations | mysql pdns
 create-history-table.pl --database pdns --table perm_items | mysql pdns
 create-history-table.pl --database pdns --table perm_templ | mysql pdns
@@ -29,10 +29,10 @@ create-history-table.pl --database pdns --table zone_templ | mysql pdns
 create-history-table.pl --database pdns --table zone_templ_records | mysql pdns
 ```
 
-Using this sript 16 \*\_history tables and 48 triggers has been created. Example:
+Using this script 16 \*\_history tables and 48 triggers has been created. Example:
 
 ```sql
-create-history-table.pl --database pdns --table records                  
+-- create-history-table.pl --database pdns --table records                  
 CREATE TABLE IF NOT EXISTS `records_history` SELECT * FROM `records` WHERE 0;
 ALTER TABLE `records_history` ENGINE=InnoDB;
 ALTER TABLE `records_history` ADD COLUMN `action` ENUM('UPDATE','INSERT','DELETE') FIRST;
